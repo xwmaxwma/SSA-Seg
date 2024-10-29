@@ -1,5 +1,5 @@
 <div align="center">
-<h1>SSAClassifier </h1>
+<h1>SSA-Seg </h1>
 <h3>Semantic and Spatial Adaptive Pixel-level Classifier for Semantic Segmentation</h3>
 
 [Xiaowen Ma](https://scholar.google.com/citations?hl=zh-CN&user=UXj8Q6kAAAAJ)<sup>1,2</sup>, [Zhenliang Ni](https://scholar.google.com/citations?user=2urTmpkAAAAJ&hl=zh-CN&oi=sra)<sup>1</sup>, [Xinghao Chen](https://scholar.google.com/citations?user=tuGWUVIAAAAJ&hl=zh-CN&oi=ao)<sup>1</sup>
@@ -12,20 +12,20 @@
 
 ## 🔥 News
 
-- **`2024/09/30`**: **We fix some bugs in the code. Currently, this repository supports several baselines and the corresponding *+SSAClassifier* versions as follows.**
+- **`2024/09/30`**: **We fix some bugs in the code. Currently, this repository supports several baselines and the corresponding *+SSA-Seg* versions as follows.**
 
 | Backbone | HRNet  (CVPR'19)      | MiT  (NeurIPS'21)           | Swin (ICCV'21)        | AFFormer  (AAAI'23)     | SeaFormer  (ICLR'23)     | MSCAN  (NeurIPS'22)       | EfficientFormerV2  (ICCV'23) |
 | -------- | -------------------- | -------------------------- | --------------------- | ---------------------- | ----------------------- | ------------------------ | --------------------------- |
 | **Head** | **OCRNet (ECCV'20)** | **SegFormer (NeurIPS'21)** | **UperNet (ECCV'18)** | **Afformer (AAAI'23)** | **SeaFormer (ICLR'23)** | **SegNext (NeurIPS'22)** | **CGRSeg  (ECCV'24)**   |
 
-- **`2024/09/26`**: **SSAClassifier is accepted by NeurIPS2024!**
+- **`2024/09/26`**: **SSA-Seg is accepted by NeurIPS2024!**
   
 
 ## 📷 Introduction
 
 ![](net.png)
 
-SSAClassifier is an effecient and powerful pixel-level classifier, which significantly improves the segmentation performance of various baselines with a negligible increase in computational cost. It has three key parts: semantic prototype adaptation (SEPA), spatial prototype adaptation (SPPA), and online multi-domain distillation. 
+SSA-Seg is an effecient and powerful pixel-level classifier, which significantly improves the segmentation performance of various baselines with a negligible increase in computational cost. It has three key parts: semantic prototype adaptation (SEPA), spatial prototype adaptation (SPPA), and online multi-domain distillation. 
 
 
 
@@ -37,7 +37,7 @@ SSAClassifier is an effecient and powerful pixel-level classifier, which signifi
 
 - General models
 
-  | +SSAClassifier |                           Backbone                           | Latency (ms) | Params(M) | Flops (G) | mIoU (ss) |
+  | +SSA-Seg |                           Backbone                           | Latency (ms) | Params(M) | Flops (G) | mIoU (ss) |
   | :------------: | :----------------------------------------------------------: | :----------: | --------- | :-------: | :-------: |
   |     OCRNet     | [HRNet-W48](https://download.openmmlab.com/pretrain/third_party/hrnetv2_w48-d2186c55.pth) |     69.3     | 8.7       |   165.0   |   47.67   |
   |    UperNet     | [Swin-T](https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/swin/swin_tiny_patch4_window7_224_20220317-1cdeb081.pth) |     54.3     | 61.1      |   236.3   |   47.56   |
@@ -47,7 +47,7 @@ SSAClassifier is an effecient and powerful pixel-level classifier, which signifi
 
 - Light weight models
 
-  | +SSAClassifier |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
+  | +SSA-Seg |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
   | :------------: | :----------------------------------------------------------: | :----------: | ---------- | :-------: | :-------: |
   |   AFFormer-B   | [AFFormer-B](https://github.com/dongbo811/AFFormer?tab=readme-ov-file) |     26.0     | 3.3        |    4.4    |   42.74   |
   |  SeaFormer-B   | [SeaFormer-B](https://github.com/fudan-zvg/SeaFormer/tree/main/seaformer-cls) |     27.3     | 8.8        |    1.8    |   42.46   |
@@ -62,7 +62,7 @@ SSAClassifier is an effecient and powerful pixel-level classifier, which signifi
 
 - General models
 
-  | +SSAClassifier |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
+  | +SSA-Seg |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
   | :------------: | :----------------------------------------------------------: | :----------: | ---------- | :-------: | :-------: |
   |     OCRNet     | [HRNet-W48](https://download.openmmlab.com/pretrain/third_party/hrnetv2_w48-d2186c55.pth) |     69.3     | 8.7        |   165.0   |   37.94   |
   |    UperNet     | [Swin-T](https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/swin/swin_tiny_patch4_window7_224_20220317-1cdeb081.pth) |     54.3     | 61.1       |   236.3   |   42.30   |
@@ -72,7 +72,7 @@ SSAClassifier is an effecient and powerful pixel-level classifier, which signifi
 
 - Light weight models
 
-  | +SSAClassifier |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
+  | +SSA-Seg |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
   | :------------: | :----------------------------------------------------------: | :----------: | ---------- | :-------: | :-------: |
   |   AFFormer-B   | [AFFormer-B](https://github.com/dongbo811/AFFormer?tab=readme-ov-file) |     26.0     | 3.3        |    4.4    |   36.40   |
   |  SeaFormer-B   | [SeaFormer-B](https://github.com/fudan-zvg/SeaFormer/tree/main/seaformer-cls) |     27.3     | 8.8        |    1.8    |   35.92   |
@@ -85,7 +85,7 @@ SSAClassifier is an effecient and powerful pixel-level classifier, which signifi
 
 - General models
 
-  | +SSAClassifier |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
+  | +SSA-Seg |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
   | :------------: | :----------------------------------------------------------: | :----------: | ---------- | :-------: | :-------: |
   |     OCRNet     | [HRNet-W48](https://download.openmmlab.com/pretrain/third_party/hrnetv2_w48-d2186c55.pth) |     69.3     | 8.7        |   143.3   |   50.21   |
   |    UperNet     | [Swin-T](https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/swin/swin_tiny_patch4_window7_224_20220317-1cdeb081.pth) |     54.3     | 61.1       |   207.7   |   55.11   |
@@ -95,7 +95,7 @@ SSAClassifier is an effecient and powerful pixel-level classifier, which signifi
 
 - Light weight models
 
-  | +SSAClassifier |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
+  | +SSA-Seg |                           Backbone                           | Latency (ms) | Params (M) | Flops (G) | mIoU (ss) |
   | :------------: | :----------------------------------------------------------: | :----------: | ---------- | :-------: | :-------: |
   |   AFFormer-B   | [AFFormer-B](https://github.com/dongbo811/AFFormer?tab=readme-ov-file) |     26.0     | 3.3        |    4.4    |   49.72   |
   |  SeaFormer-B   | [SeaFormer-B](https://github.com/fudan-zvg/SeaFormer/tree/main/seaformer-cls) |     27.3     | 8.8        |    1.8    |   47.00   |
@@ -118,7 +118,7 @@ SSAClassifier is an effecient and powerful pixel-level classifier, which signifi
   pip install "mmsegmentation==0.30.0"
   ```
 
-  SSAClassifier is built based on [mmsegmentation-0.30.0](https://github.com/open-mmlab/mmsegmentation/tree/v0.30.0), which can be referenced for data preparation.
+  SSA-Seg is built based on [mmsegmentation-0.30.0](https://github.com/open-mmlab/mmsegmentation/tree/v0.30.0), which can be referenced for data preparation.
 
 - Train
 
@@ -153,7 +153,7 @@ SSAClassifier is an effecient and powerful pixel-level classifier, which signifi
 If you are interested in our work, please consider giving a 🌟 and citing our work below. 
 
 ```
-@misc{ssaclassifier,
+@misc{SSA-Seg,
    title={Semantic and Spatial Adaptive Pixel-level Classifier for Semantic Segmentation}, 
    author={Xiaowen Ma and Zhenliang Ni and Xinghao Chen},
    year={2024},
