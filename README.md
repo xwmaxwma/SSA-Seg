@@ -153,13 +153,13 @@ SSA-Seg is an effecient and powerful pixel-level classifier, which significantly
 If you are interested in our work, please consider giving a 🌟 and citing our work below. 
 
 ```
-@misc{SSA-Seg,
-   title={Semantic and Spatial Adaptive Pixel-level Classifier for Semantic Segmentation}, 
-   author={Xiaowen Ma and Zhenliang Ni and Xinghao Chen},
-   year={2024},
-   eprint={2405.06525},
-   archivePrefix={arXiv},
-   primaryClass={cs.CV}
+@inproceedings{
+ssaseg,
+title={{SSA}-Seg: Semantic and Spatial Adaptive Pixel-level Classifier for Semantic Segmentation},
+author={Xiaowen Ma and Zhen-Liang Ni and Xinghao Chen},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=RZZo23pQFL}
 }
 ```
 
